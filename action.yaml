@@ -1,0 +1,15 @@
+# action.yaml
+name: 'Verify PR title'
+description: 'Validate PR title with proper format'
+inputs:
+  title:
+    description: 'PR title'
+    required: true
+outputs:
+  is_valid:
+    description: 'Title validity'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.title}}

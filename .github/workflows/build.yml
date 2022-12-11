@@ -1,0 +1,17 @@
+name: 'Verify PR'
+
+on: [push]
+
+jobs:
+  verify_pr:
+    runs-on: ubuntu-latest
+    name: Check PR title
+    steps:
+      - name: Check title
+        uses: ./ # Uses an action in the root directory
+        id: title
+        with:
+          title: Testing PR title
+
+      - name: Get result
+        run: echo "PR title ${{ steps.title.outputs.is_valid }}"
