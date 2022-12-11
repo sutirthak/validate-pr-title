@@ -9,6 +9,8 @@ RUN	apk add --no-cache \
   jq \
 
 COPY . /
+WORKDIR /
+RUN ls
 
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
