@@ -1,6 +1,9 @@
 # Base image
 FROM alpine:latest
 
+RUN	apk add --no-cache \
+  bash
+
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
 
@@ -10,4 +13,4 @@ RUN chmod +x /entrypoint.sh
 RUN ls
 
 # file to execute when the docker container starts up
-ENTRYPOINT ["/home/runner/work/_actions/sutirthak/validate-pr-title/main/entrypoint.sh"]
+ENTRYPOINT ["/entrypoint.sh"]
