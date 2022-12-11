@@ -8,7 +8,7 @@ jobs:
     name: Check PR title
     steps:
       - name: Check title
-        uses: ./ # Uses an action in the root directory
+        uses: sutirthak/validate-pr-title@main
         id: title
         with:
           title: Testing PR title
