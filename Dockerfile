@@ -10,4 +10,4 @@ RUN chmod +x /entrypoint.sh
 RUN ls
 
 # file to execute when the docker container starts up
-ENTRYPOINT ["entrypoint.sh"]
+ENTRYPOINT ["/home/runner/work/_actions/sutirthak/validate-pr-title/main/entrypoint.sh"]
