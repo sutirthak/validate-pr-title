@@ -2,7 +2,8 @@
 FROM alpine:latest
 
 RUN	apk add --no-cache \
-  bash
+  bash \
+  python
 
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
