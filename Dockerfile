@@ -1,10 +1,6 @@
 # Base image
 FROM alpine:latest
 
-COPY . /
-WORKDIR /
-RUN ls
-
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
 
