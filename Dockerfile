@@ -2,8 +2,7 @@
 FROM python:3-alpine
 
 RUN	apk add --no-cache \
-  bash \
-  python
+  bash
 
 # Copies your code file  repository to the filesystem
 COPY entrypoint.sh /entrypoint.sh
