@@ -1,5 +1,5 @@
 # Base image
-FROM alpine:latest
+FROM python:3-alpine
 
 RUN	apk add --no-cache \
   bash \
@@ -15,3 +15,4 @@ RUN ls
 
 # file to execute when the docker container starts up
 ENTRYPOINT ["/entrypoint.sh"]
+
