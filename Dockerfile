@@ -10,6 +10,7 @@ COPY verify-pr.py /verify-pr.py
 
 # change permission to execute the script and
 RUN chmod +x /entrypoint.sh
+RUN chmod +x /verify-pr.py
 
 RUN ls
 
